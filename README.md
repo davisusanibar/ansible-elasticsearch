@@ -1,9 +1,10 @@
+# Elasticsearch (+plugin: HQ, head, paramedic)
 
-This project is a for for: [Ansible-Galaxy-ABTPeople](https://github.com/abtpeople/ansible-elasticsearch)
+This project is a fork for: [Ansible-Galaxy-ABTPeople](https://github.com/abtpeople/ansible-elasticsearch)
 
-We add this validation:
+## We add this validation:
 
-1.- `To validate first if the current plugin to install was installed or not.`
+### 1.- `To validate first if the current plugin to install was installed or not.`
 command: bin/plugin -l
 when: lstElasticPlugins.stdout.find('{{item.id}}') == -1
 
@@ -13,7 +14,7 @@ plugin -install mobz/elasticsearch-head
 Failed to install mobz/elasticsearch-head, reason: plugin directory C:\dsusanibar\innovation\elk\plugin\head already exists. 
 To update the plugin, uninstall it first using --remove mobz/elasticsearch-head command
 
-2.- `We add an example about how do we could use the role "ansible-elasticsearch".`
+### 2.- `We add an example about how do we could use the role "ansible-elasticsearch".`
 ansible-elasticsearch/examples/site_elasticsearch_playbook.yml
 
 ```yaml
